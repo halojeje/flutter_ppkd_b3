@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppkd_b3/day_5/styling.dart';
+import 'package:flutter_ppkd_b3/tugas_!/tugas.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Styling(),
+      home: Tugas(),
     );
   }
 }
