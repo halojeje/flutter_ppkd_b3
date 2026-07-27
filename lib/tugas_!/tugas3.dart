@@ -47,43 +47,63 @@ class Tugas3 extends StatelessWidget {
                         Padding(padding: EdgeInsets.all(6)),
 
                         // --- Bagian Form ---
-                        const TextField(
+                        TextField(
                           decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Color(0xFFF1F9F8),
                             labelText: "Nama Pengguna",
                             prefixIcon: Icon(Icons.person),
-                            border: OutlineInputBorder(),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 12),
-                        const TextField(
+                        SizedBox(height: 12),
+                        TextField(
                           decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Color(0xFFF1F9F8),
                             labelText: "Email Pengguna",
                             prefixIcon: Icon(Icons.email),
-                            border: OutlineInputBorder(),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 12),
-                        const TextField(
+                        SizedBox(height: 12),
+                        TextField(
                           decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Color(0xFFF1F9F8),
                             labelText: "Telepon Pengguna",
                             prefixIcon: Icon(Icons.phone),
-                            border: OutlineInputBorder(),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 12),
-                        const TextField(
+                        SizedBox(height: 12),
+                        TextField(
                           decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Color(0xFFF1F9F8),
                             labelText: "Input Password",
                             prefixIcon: Icon(Icons.person),
-                            border: OutlineInputBorder(),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 12),
-                        const TextField(
+                        SizedBox(height: 12),
+                        TextField(
                           decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Color(0xFFF1F9F8),
                             labelText: "Konfirmasi Password",
                             suffixIcon: Icon(Icons.remove_red_eye),
-                            border: OutlineInputBorder(),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
                         ),
                       ],
@@ -109,7 +129,6 @@ class Tugas3 extends StatelessWidget {
             crossAxisSpacing: 10,
             mainAxisSpacing: 20,
 
-           
             children: [
               Stack(
                 alignment: Alignment.bottomCenter,
