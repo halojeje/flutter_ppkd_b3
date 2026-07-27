@@ -123,6 +123,7 @@ class Tugas3 extends StatelessWidget {
           ),
 
           GridView.count(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             crossAxisCount: 3,
@@ -133,12 +134,19 @@ class Tugas3 extends StatelessWidget {
               Stack(
                 alignment: Alignment.bottomCenter,
                 children: [
-                  Image.asset("assets/images/jkt.jpg", fit: BoxFit.cover),
-
+                  // Gunakan ClipRRect untuk memotong sudut gambar
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      "assets/images/jkt.jpg",
+                      fit: BoxFit.cover,
+                      width: double.infinity, // Agar gambar memenuhi lebar
+                      height: 150, // Tentukan tinggi gambar
+                    ),
+                  ),
                   Container(
                     color: Color(0xFF607D89),
                     padding: EdgeInsets.all(4),
-
                     child: Text(
                       "Jakarta",
                       style: TextStyle(
@@ -152,7 +160,16 @@ class Tugas3 extends StatelessWidget {
               Stack(
                 alignment: Alignment.bottomCenter,
                 children: [
-                  Image.asset("assets/images/bdg.png", fit: BoxFit.cover),
+                  // Gunakan ClipRRect untuk memotong sudut gambar
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      "assets/images/bdg.png",
+                      fit: BoxFit.cover,
+                      width: double.infinity, // Agar gambar memenuhi lebar
+                      height: 150, // Tentukan tinggi gambar
+                    ),
+                  ),
                   Container(
                     color: Color(0xFF607D89),
                     padding: EdgeInsets.all(4),
@@ -169,7 +186,16 @@ class Tugas3 extends StatelessWidget {
               Stack(
                 alignment: Alignment.bottomCenter,
                 children: [
-                  Image.asset("assets/images/jog.png", fit: BoxFit.cover),
+                  // Gunakan ClipRRect untuk memotong sudut gambar
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      "assets/images/jog.png",
+                      fit: BoxFit.cover,
+                      width: double.infinity, // Agar gambar memenuhi lebar
+                      height: 150, // Tentukan tinggi gambar
+                    ),
+                  ),
                   Container(
                     color: Color(0xFF607D89),
                     padding: EdgeInsets.all(4),
@@ -186,7 +212,16 @@ class Tugas3 extends StatelessWidget {
               Stack(
                 alignment: Alignment.bottomCenter,
                 children: [
-                  Image.asset("assets/images/smg.png", fit: BoxFit.cover),
+                  // Gunakan ClipRRect untuk memotong sudut gambar
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      "assets/images/smg.png",
+                      fit: BoxFit.cover,
+                      width: double.infinity, // Agar gambar memenuhi lebar
+                      height: 150, // Tentukan tinggi gambar
+                    ),
+                  ),
                   Container(
                     color: Color(0xFF607D89),
                     padding: EdgeInsets.all(4),
@@ -200,10 +235,20 @@ class Tugas3 extends StatelessWidget {
                   ),
                 ],
               ),
+
               Stack(
                 alignment: Alignment.bottomCenter,
                 children: [
-                  Image.asset("assets/images/lmp.png", fit: BoxFit.cover),
+                  // Gunakan ClipRRect untuk memotong sudut gambar
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      "assets/images/lmp.png",
+                      fit: BoxFit.cover,
+                      width: double.infinity, // Agar gambar memenuhi lebar
+                      height: 150, // Tentukan tinggi gambar
+                    ),
+                  ),
                   Container(
                     color: Color(0xFF607D89),
                     padding: EdgeInsets.all(4),
@@ -217,10 +262,20 @@ class Tugas3 extends StatelessWidget {
                   ),
                 ],
               ),
+
               Stack(
                 alignment: Alignment.bottomCenter,
                 children: [
-                  Image.asset("assets/images/pdg.png", fit: BoxFit.cover),
+                  // Gunakan ClipRRect untuk memotong sudut gambar
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      "assets/images/pdg.png",
+                      fit: BoxFit.cover,
+                      width: double.infinity, // Agar gambar memenuhi lebar
+                      height: 150, // Tentukan tinggi gambar
+                    ),
+                  ),
                   Container(
                     color: Color(0xFF607D89),
                     padding: EdgeInsets.all(4),
@@ -241,3 +296,4 @@ class Tugas3 extends StatelessWidget {
     );
   }
 }
+
