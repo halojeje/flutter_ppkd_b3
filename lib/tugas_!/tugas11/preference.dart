@@ -1,33 +1,31 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-// Helper class untuk mengelola penyimpanan data lokal (Session/Preferences) menggunakan package SharedPreferences.
-class PreferenceHandler {
-  // Variable static untuk menyimpan instance dari SharedPreferences.
-  // late menandakan variable akan diinisialisasi sebelum digunakan (pada fungsi init).
-  static late SharedPreferences _prefs;
+class PreferenceHelper {
+  static const String keyIsLogin = 'is_login';
+  static const String keyUserEmail = 'user_email';
 
-  // Inisialisasi SharedPreferences.
-  // Wajib dipanggil sekali di awal aplikasi (misalnya di main.dart) sebelum membaca/menulis data.
-  static Future<void> init() async {
-    _prefs = await SharedPreferences.getInstance();
+  // Simpan Session Login
+  static Future<void> saveLoginSession(String email) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(keyIsLogin, true);
+    await prefs.setString(keyUserEmail, email);
   }
 
-  // Key unik yang digunakan untuk menyimpan status login di lokal storage.
-  static const _keyIsLogin = "isLogin";
-
-  // Membantu menyimpan status login pengguna (true/false) ke dalam SharedPreferences.
-  static Future<void> setLogin(bool isLogin) async {
-    await _prefs.setBool(_keyIsLogin, isLogin);
+  // Cek Status Login
+  static Future<bool> isLoggedIn() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(keyIsLogin) ?? false;
   }
 
-  // Getter static untuk mengecek apakah pengguna sudah login atau belum.
-  // Mengembalikan value boolean dari key 'isLogin', jika null (belum pernah disimpan) maka default-nya false.
-  static bool get isLogin {
-    return _prefs.getBool(_keyIsLogin) ?? false;
+  // Ambil Email yang Sedang Login
+  static Future<String?> getEmail() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString(keyUserEmail);
   }
 
-  // Fungsi untuk logout. Menghapus key status login dari SharedPreferences.
-  static Future<void> logOut() async {
-    await _prefs.remove(_keyIsLogin);
+  // Clear Session (Untuk Logout)
+  static Future<void> clearSession() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.clear();
   }
 }
