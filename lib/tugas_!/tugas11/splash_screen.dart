@@ -1,46 +1,66 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppkd_b3/day_13/login.dart';
-import 'package:flutter_ppkd_b3/day_17/service/preference_handler.dart';
-import 'package:flutter_ppkd_b3/day_17/views/login_day_17.dart';
-import 'package:flutter_ppkd_b3/extension/navigator.dart';
-import 'package:lottie/lottie.dart';
+import 'package:flutter_ppkd_b3/tugas_!/tugas11/tugas11_loginpage.dart';
+import 'package:flutter_ppkd_b3/tugas_!/tugas11/tugas11_preference.dart';
+// Jika ada HomePage, import file HomePage di sini
 
-// Widget SplashScreenDay17 berupa StatefulWidget untuk menangani proses async (delay & pengecekan session login saat awal aplikasi dibuka).
-class SplashScreenDay17 extends StatefulWidget {
-  const SplashScreenDay17({super.key});
+class SplashScreenTugas11 extends StatefulWidget {
+  const SplashScreenTugas11({super.key});
 
   @override
-  State<SplashScreenDay17> createState() => _SplashScreenDay17State();
+  State<SplashScreenTugas11> createState() => _SplashScreenTugas11State();
 }
 
-class _SplashScreenDay17State extends State<SplashScreenDay17> {
+class _SplashScreenTugas11State extends State<SplashScreenTugas11> {
   @override
   void initState() {
     super.initState();
-    // Memanggil fungsi goToLogin() segera setelah widget diinisialisasi.
-    goToLogin();
+    _checkSession();
   }
 
-  // Fungsi untuk menangani alur perpindahan halaman dari splash screen.
-  void goToLogin() async {
-    // Memberikan penundaan (delay) selama 3 detik untuk menampilkan animasi splash screen.
-    await Future.delayed(const Duration(seconds: 3));
+  Future<void> _checkSession() async {
+    // 1. Tahan tampilan selama 2 detik
+    await Future.delayed(const Duration(seconds: 2));
 
-    // Mengecek status login pengguna dari SharedPreferences melalui PreferenceHandler.
-    if (PreferenceHandler.isLogin == true) {
-      // Jika pengguna sudah login, arahkan langsung ke halaman utama (BottomNavDay13).
-      context.push(const LoginDay13());
+    if (!mounted) return;
+
+    // 2. Cek status login dari SharedPreferences
+    bool isLogged = await PreferenceHelper.isLoggedIn();
+
+    if (!mounted) return;
+
+    // 3. Pindah halaman menggunakan pushReplacement (agar tidak bisa di-back ke Splash Screen)
+    if (isLogged) {
+      // Jika sudah login, arahkan ke HomePage (atau LoginPage jika HomePage belum dibuat)
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const LoginPageTugas11()),
+      );
     } else {
-      // Jika belum login, arahkan ke halaman LoginDay17.
-      context.push(const LoginDay17());
+      // Jika belum login, arahkan ke LoginPage
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const LoginPageTugas11()),
+      );
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Menampilkan animasi Lottie di tengah layar sebagai visual splash screen.
-      body: Center(child: Lottie.asset("assets/animation/error.json")),
+      backgroundColor: const Color(0xFFFFB703),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Logo / Gambar Aplikasi
+            Image.asset('assets/images/tes_register.png', width: 200),
+            const SizedBox(height: 30),
+
+            // Circular Progress Indicator (Loading)
+            const CircularProgressIndicator(color: Colors.black),
+          ],
+        ),
+      ),
     );
   }
 }
