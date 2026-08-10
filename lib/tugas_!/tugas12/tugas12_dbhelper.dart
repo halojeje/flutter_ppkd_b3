@@ -1,4 +1,4 @@
-import 'package:flutter_ppkd_b3/tugas_!/tugas12_usermodel12.dart';
+import 'package:flutter_ppkd_b3/tugas_!/tugas12/tugas12_usermodel12.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -96,3 +96,4 @@ class DBHelper {
     return await db.delete('users', where: 'id = ?', whereArgs: [id]);
   }
 }
+
