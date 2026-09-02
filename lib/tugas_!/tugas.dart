@@ -53,6 +53,13 @@ class Tugas extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [Text("mendalami Flutter di PPKD.")],
           ),
+
+          Card(
+            margin: EdgeInsets.all(10.0),
+            elevation: 3,
+            color: Colors.lightBlue,
+            child: Text('Halo halo bandung'),
+          ),
         ],
       ),
     );
