@@ -19,6 +19,10 @@ MovieModel _$MovieModelFromJson(Map<String, dynamic> json) => MovieModel(
   releaseDate: json['release_date'] as String?,
   runningTime: json['running_time'] as String?,
   rtScore: json['rt_score'] as String?,
+  people: (json['people'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  species: (json['species'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  locations: (json['locations'] as List<dynamic>?)?.map((e) => e as String).toList(),
+  vehicles: (json['vehicles'] as List<dynamic>?)?.map((e) => e as String).toList(),
 );
 
 Map<String, dynamic> _$MovieModelToJson(MovieModel instance) =>
@@ -35,4 +39,8 @@ Map<String, dynamic> _$MovieModelToJson(MovieModel instance) =>
       'release_date': instance.releaseDate,
       'running_time': instance.runningTime,
       'rt_score': instance.rtScore,
+      'people': instance.people,
+      'species': instance.species,
+      'locations': instance.locations,
+      'vehicles': instance.vehicles,
     };
