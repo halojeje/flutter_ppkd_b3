@@ -76,7 +76,9 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
       barrierDismissible: false,
       builder: (context) {
         return Dialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
           child: Padding(
             padding: const EdgeInsets.all(28.0),
             child: Column(
@@ -85,13 +87,24 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
                 Container(
                   width: 72,
                   height: 72,
-                  decoration: const BoxDecoration(color: successBg, shape: BoxShape.circle),
-                  child: const Icon(Icons.task_alt, color: successGreen, size: 40),
+                  decoration: const BoxDecoration(
+                    color: successBg,
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.task_alt,
+                    color: successGreen,
+                    size: 40,
+                  ),
                 ),
                 const SizedBox(height: 20),
                 const Text(
                   "Registration Successful",
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: textMain),
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: textMain,
+                  ),
                 ),
                 const SizedBox(height: 10),
                 const Text(
@@ -106,7 +119,9 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: primaryNavy,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                       elevation: 0,
                     ),
                     onPressed: () {
@@ -114,7 +129,11 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
                     },
                     child: const Text(
                       "Go to Dashboard",
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
@@ -143,7 +162,11 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
             SizedBox(width: 8),
             Text(
               "PrepMaster",
-              style: TextStyle(color: primaryNavy, fontWeight: FontWeight.bold, fontSize: 20),
+              style: TextStyle(
+                color: primaryNavy,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
             ),
           ],
         ),
@@ -151,18 +174,29 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
           if (isDesktop) ...[
             TextButton(
               onPressed: () {},
-              child: const Text("Study Guide", style: TextStyle(color: textSub)),
+              child: const Text(
+                "Study Guide",
+                style: TextStyle(color: textSub),
+              ),
             ),
             TextButton(
               onPressed: () {},
-              child: const Text("Test Centers", style: TextStyle(color: textSub)),
+              child: const Text(
+                "Test Centers",
+                style: TextStyle(color: textSub),
+              ),
             ),
             const SizedBox(width: 12),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: primaryNavy,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 10,
+                ),
               ),
               onPressed: () {},
               child: const Text("Login", style: TextStyle(color: Colors.white)),
@@ -173,14 +207,23 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
       ),
       body: Center(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: isDesktop ? 32 : 16, vertical: 24),
+          padding: EdgeInsets.symmetric(
+            horizontal: isDesktop ? 32 : 16,
+            vertical: 24,
+          ),
           child: Container(
             // maxWidth: isDesktop ? 1000 : 480,
             decoration: BoxDecoration(
               color: cardSurface,
               borderRadius: BorderRadius.circular(16),
               border: Border.all(color: borderSubtle, width: 1),
-              boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 10, offset: Offset(0, 4))],
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 10,
+                  offset: Offset(0, 4),
+                ),
+              ],
             ),
             clipBehavior: Clip.antiAlias,
             child: isDesktop
@@ -212,7 +255,11 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
                                     SizedBox(height: 16),
                                     Text(
                                       "Join 50,000+ students achieving their target scores through scaffolded micro-learning and expert-designed diagnostic matrices.",
-                                      style: TextStyle(color: Color(0xFFDCE1FF), fontSize: 14, height: 1.5),
+                                      style: TextStyle(
+                                        color: Color(0xFFDCE1FF),
+                                        fontSize: 14,
+                                        height: 1.5,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -222,13 +269,15 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
                                     _buildFeatureItem(
                                       icon: Icons.verified,
                                       title: "ETS-Aligned Standards",
-                                      subtitle: "Curriculum updated for the 2024 exam format.",
+                                      subtitle:
+                                          "Curriculum updated for the 2024 exam format.",
                                     ),
                                     const SizedBox(height: 16),
                                     _buildFeatureItem(
                                       icon: Icons.analytics,
                                       title: "AI Performance Tracking",
-                                      subtitle: "Pinpoint grammar and vocabulary gaps instantly.",
+                                      subtitle:
+                                          "Pinpoint grammar and vocabulary gaps instantly.",
                                     ),
                                   ],
                                 ),
@@ -238,19 +287,29 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
                         ),
                         // Form Kanan
                         Expanded(
-                          child: Padding(padding: const EdgeInsets.all(40), child: _buildForm(context)),
+                          child: Padding(
+                            padding: const EdgeInsets.all(40),
+                            child: _buildForm(context),
+                          ),
                         ),
                       ],
                     ),
                   )
-                : Padding(padding: const EdgeInsets.all(24), child: _buildForm(context)),
+                : Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: _buildForm(context),
+                  ),
           ),
         ),
       ),
     );
   }
 
-  Widget _buildFeatureItem({required IconData icon, required String title, required String subtitle}) {
+  Widget _buildFeatureItem({
+    required IconData icon,
+    required String title,
+    required String subtitle,
+  }) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -268,10 +327,20 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 15),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 15,
+                  ),
                 ),
                 const SizedBox(height: 2),
-                Text(subtitle, style: const TextStyle(color: Color(0xFFB6C4FF), fontSize: 12)),
+                Text(
+                  subtitle,
+                  style: const TextStyle(
+                    color: Color(0xFFB6C4FF),
+                    fontSize: 12,
+                  ),
+                ),
               ],
             ),
           ),
@@ -288,7 +357,11 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
         children: [
           const Text(
             "Create your account",
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: textMain),
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: textMain,
+            ),
           ),
           const SizedBox(height: 6),
           const Text(
@@ -300,7 +373,11 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
           // Field: Full Name
           const Text(
             "Full Name",
-            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: textSub),
+            style: TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.w600,
+              color: textSub,
+            ),
           ),
           const SizedBox(height: 8),
           TextFormField(
@@ -313,11 +390,17 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
             },
             decoration: InputDecoration(
               hintText: "Enter your full legal name",
-              hintStyle: TextStyle(color: textSub.withValues(alpha: 0.5), fontSize: 14),
+              hintStyle: TextStyle(
+                color: textSub.withValues(alpha: 0.5),
+                fontSize: 14,
+              ),
               prefixIcon: const Icon(Icons.person_outline, color: textSub),
               filled: true,
               fillColor: inputBg,
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 14,
+              ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: const BorderSide(color: borderSubtle),
@@ -337,7 +420,11 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
           // Field: Institutional Email
           const Text(
             "Institutional Email",
-            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: textSub),
+            style: TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.w600,
+              color: textSub,
+            ),
           ),
           const SizedBox(height: 8),
           TextFormField(
@@ -354,11 +441,17 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
             },
             decoration: InputDecoration(
               hintText: "name@university.edu",
-              hintStyle: TextStyle(color: textSub.withValues(alpha: 0.5), fontSize: 14),
+              hintStyle: TextStyle(
+                color: textSub.withValues(alpha: 0.5),
+                fontSize: 14,
+              ),
               prefixIcon: const Icon(Icons.mail_outline, color: textSub),
               filled: true,
               fillColor: inputBg,
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 14,
+              ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: const BorderSide(color: borderSubtle),
@@ -378,7 +471,11 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
           // Field: Password
           const Text(
             "Password",
-            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: textSub),
+            style: TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.w600,
+              color: textSub,
+            ),
           ),
           const SizedBox(height: 8),
           TextFormField(
@@ -395,11 +492,16 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
             },
             decoration: InputDecoration(
               hintText: "At least 8 characters",
-              hintStyle: TextStyle(color: textSub.withValues(alpha: 0.5), fontSize: 14),
+              hintStyle: TextStyle(
+                color: textSub.withValues(alpha: 0.5),
+                fontSize: 14,
+              ),
               prefixIcon: const Icon(Icons.lock_outline, color: textSub),
               suffixIcon: IconButton(
                 icon: Icon(
-                  _isObscurePassword ? Icons.visibility_outlined : Icons.visibility_off_outlined,
+                  _isObscurePassword
+                      ? Icons.visibility_outlined
+                      : Icons.visibility_off_outlined,
                   color: textSub,
                 ),
                 onPressed: () {
@@ -410,7 +512,10 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
               ),
               filled: true,
               fillColor: inputBg,
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 14,
+              ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: const BorderSide(color: borderSubtle),
@@ -437,7 +542,9 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
                 child: Checkbox(
                   value: _agreeToTerms,
                   activeColor: primaryNavy,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4),
+                  ),
                   onChanged: (val) {
                     setState(() {
                       _agreeToTerms = val ?? false;
@@ -454,12 +561,18 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
                       TextSpan(text: "I agree to the "),
                       TextSpan(
                         text: "Terms of Service",
-                        style: TextStyle(color: primaryNavy, fontWeight: FontWeight.w600),
+                        style: TextStyle(
+                          color: primaryNavy,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                       TextSpan(text: " and "),
                       TextSpan(
                         text: "Privacy Policy",
-                        style: TextStyle(color: primaryNavy, fontWeight: FontWeight.w600),
+                        style: TextStyle(
+                          color: primaryNavy,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                       TextSpan(text: " regarding academic data collection."),
                     ],
@@ -477,7 +590,9 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: primaryNavy,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 elevation: 1,
               ),
               onPressed: _isLoading ? null : _submitForm,
@@ -485,17 +600,28 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
                   ? const SizedBox(
                       width: 24,
                       height: 24,
-                      child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2.5),
+                      child: CircularProgressIndicator(
+                        color: Colors.white,
+                        strokeWidth: 2.5,
+                      ),
                     )
                   : Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         Text(
                           "Create Account",
-                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: Colors.white),
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
                         ),
                         SizedBox(width: 8),
-                        Icon(Icons.arrow_forward, color: Colors.white, size: 20),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Colors.white,
+                          size: 20,
+                        ),
                       ],
                     ),
             ),
@@ -508,13 +634,20 @@ class _RegisterToeflPageState extends State<RegisterToeflPage> {
           Center(
             child: Column(
               children: [
-                const Text("Already have a PrepMaster account?", style: TextStyle(fontSize: 13, color: textSub)),
+                const Text(
+                  "Already have a PrepMaster account?",
+                  style: TextStyle(fontSize: 13, color: textSub),
+                ),
                 const SizedBox(height: 4),
                 GestureDetector(
                   onTap: () {},
                   child: const Text(
                     "Login to Continue",
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: primaryNavy),
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: primaryNavy,
+                    ),
                   ),
                 ),
               ],

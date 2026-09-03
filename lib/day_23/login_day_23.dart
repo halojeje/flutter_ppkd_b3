@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppkd_b3/day_13/bottom_nav.dart';
 import 'package:flutter_ppkd_b3/day_17/service/preference_handler.dart';
 import 'package:flutter_ppkd_b3/day_18/database/db_helper.dart';
 import 'package:flutter_ppkd_b3/extension/navigator.dart'
@@ -81,7 +80,7 @@ class _LoginDay23State extends State<LoginDay23> {
       );
 
       // Navigasi ke halaman utama
-      context.pushAndRemoveAll(const BottomNavDay13());
+      context.pushAndRemoveAll(const BottomAppBar());
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(

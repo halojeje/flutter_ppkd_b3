@@ -1,5 +1,5 @@
+import 'package:flutter_ppkd_b3/day_18/models/user_login_model.dart';
 import 'package:path/path.dart';
-import 'package:ppkd_b7/day_18/models/user_login_model.dart';
 import 'package:sqflite/sqflite.dart';
 
 // Class DBHelper menggunakan pola desain Singleton untuk mengelola koneksi dan operasi database SQLite (sqflite).
@@ -126,4 +126,6 @@ class DBHelper {
       return false;
     }
   }
+
+  // Future<List<UserModelSQL>>? getUsers() async {}
 }

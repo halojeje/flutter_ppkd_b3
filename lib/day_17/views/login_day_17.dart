@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppkd_b3/day_13/bottom_nav.dart';
 import 'package:flutter_ppkd_b3/day_13/login.dart';
 import 'package:flutter_ppkd_b3/day_17/service/preference_handler.dart';
 import 'package:flutter_ppkd_b3/extension/navigator.dart';
@@ -169,7 +168,7 @@ class _LoginDay17State extends State<LoginDay17> {
                 child: ElevatedButton.icon(
                   onPressed: () {
                     // Navigasi alternatif ke halaman DrawerDay13
-                    context.push(const BottomNavDay13());
+                    context.push(const Drawer());
                   },
                   icon: Image.asset('assets/images/Fb.png', cacheHeight: 30),
                   label: const Text(

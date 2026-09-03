@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppkd_b3/day_13/drawer.dart';
 import 'package:flutter_ppkd_b3/extension/navigator.dart';
 
 class LoginDay13 extends StatelessWidget {
@@ -77,7 +76,7 @@ class LoginDay13 extends StatelessWidget {
 
                   // ONPRESSED
                   onPressed: () {
-                    context.push(DrawerDay13());
+                    context.push(AboutDialog());
                   },
 
                   child: Text(

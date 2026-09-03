@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ppkd_b3/day_32/views/movie_list_day32.dart';
 import 'package:flutter_ppkd_b3/tugas_!/tugas11/tugas11_preference.dart';
 import 'package:flutter_ppkd_b3/tugas_!/tugas12/tugas12_dbhelper.dart';
-import 'package:flutter_ppkd_b3/tugas_!/tugas12/tugas12_loginpage.dart';
+import 'package:flutter_ppkd_b3/tugas_!/tugas12/tugas12_loginday.dart';
 import 'package:flutter_ppkd_b3/tugas_!/tugas12/tugas12_usermodel12.dart';
 
 class RegisterTugas13 extends StatefulWidget {
