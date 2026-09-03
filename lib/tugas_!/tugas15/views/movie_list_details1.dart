@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppkd_b3/day_32/models/movie_model.dart';
+import 'package:flutter_ppkd_b3/tugas_!/tugas15_API/model/movie_model.dart';
 import 'package:flutter_ppkd_b3/tugas_!/tugas15_API/views/home_screen.dart';
 // Perbaiki path import home_screen agar sama dengan file lain:
 
