@@ -56,6 +56,18 @@ class MovieModel {
   @JsonKey(name: "rt_score")
   final String? rtScore;
 
+  @JsonKey(name: "people")
+  final List<String>? people;
+
+  @JsonKey(name: "species")
+  final List<String>? species;
+
+  @JsonKey(name: "locations")
+  final List<String>? locations;
+
+  @JsonKey(name: "vehicles")
+  final List<String>? vehicles;
+
   MovieModel({
     this.id,
     this.title,
@@ -69,6 +81,10 @@ class MovieModel {
     this.releaseDate,
     this.runningTime,
     this.rtScore,
+    this.people,
+    this.species,
+    this.locations,
+    this.vehicles,
   });
 
   factory MovieModel.fromJson(Map<String, dynamic> json) =>
@@ -76,4 +92,3 @@ class MovieModel {
 
   Map<String, dynamic> toJson() => _$MovieModelToJson(this);
 }
-
