@@ -144,7 +144,7 @@ class _LoginScreenDay33State extends State<LoginScreenDay33> {
                 if (userName.isNotEmpty) ...[
                   const SizedBox(height: 8),
                   Text(
-                    "Selamat datang kembali, $userName!",
+                    "Welcome back, $userName!",
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 15,
@@ -155,7 +155,7 @@ class _LoginScreenDay33State extends State<LoginScreenDay33> {
                 ],
                 const SizedBox(height: 10),
                 const Text(
-                  "Anda berhasil masuk ke akun PrepMaster Anda.",
+                  "You have successfully logged in into your PrepMaster account.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 14,
