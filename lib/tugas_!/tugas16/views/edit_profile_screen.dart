@@ -58,7 +58,7 @@ class _EditProfileScreenDay33State extends State<EditProfileScreenDay33> {
         });
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text("Token tidak ditemukan. Silakan login kembali."),
+            content: Text("Token can't be found. Please login again."),
             backgroundColor: Colors.redAccent,
           ),
         );
@@ -81,7 +81,7 @@ class _EditProfileScreenDay33State extends State<EditProfileScreenDay33> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(response.message ?? "Profil berhasil diperbarui"),
+          content: Text(response.message ?? "Profile updated successfully"),
           backgroundColor: AppColors.successGreen,
         ),
       );
@@ -104,7 +104,7 @@ class _EditProfileScreenDay33State extends State<EditProfileScreenDay33> {
       } else if (e.type == DioExceptionType.connectionTimeout ||
           e.type == DioExceptionType.receiveTimeout ||
           e.type == DioExceptionType.connectionError) {
-        errorMessage = "Koneksi internet bermasalah. Periksa jaringan Anda.";
+        errorMessage = "Internet connection problem. Check your network.";
       }
 
       ScaffoldMessenger.of(context).showSnackBar(
@@ -141,7 +141,7 @@ class _EditProfileScreenDay33State extends State<EditProfileScreenDay33> {
         elevation: 0.5,
         surfaceTintColor: Colors.transparent,
         title: const Text(
-          "Edit Profil Pengguna",
+          "Edit User Profile",
           style: TextStyle(
             color: AppColors.primaryNavy,
             fontWeight: FontWeight.bold,
@@ -180,7 +180,7 @@ class _EditProfileScreenDay33State extends State<EditProfileScreenDay33> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    "Ubah Informasi Profil",
+                    "Edit Profile Information",
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
@@ -189,14 +189,14 @@ class _EditProfileScreenDay33State extends State<EditProfileScreenDay33> {
                   ),
                   const SizedBox(height: 6),
                   const Text(
-                    "Perbarui nama profil Anda di bawah ini.",
+                    "Update your profile name below.",
                     style: TextStyle(fontSize: 14, color: AppColors.textSub),
                   ),
                   const SizedBox(height: 28),
 
                   // Field: Nama
                   const Text(
-                    "Nama Lengkap",
+                    "Name",
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
@@ -208,12 +208,12 @@ class _EditProfileScreenDay33State extends State<EditProfileScreenDay33> {
                     controller: _nameController,
                     validator: (value) {
                       if (value == null || value.trim().isEmpty) {
-                        return "Nama lengkap tidak boleh kosong";
+                        return "Name cant be empty";
                       }
                       return null;
                     },
                     decoration: InputDecoration(
-                      hintText: "Masukkan nama lengkap baru",
+                      hintText: "Enter the new full name",
                       prefixIcon: const Icon(
                         Icons.person_outline,
                         color: AppColors.textSub,
@@ -249,7 +249,7 @@ class _EditProfileScreenDay33State extends State<EditProfileScreenDay33> {
 
                   // Field: Email (Read Only)
                   const Text(
-                    "Alamat Email (Tidak dapat diubah)",
+                    "Email Address (Can't be changed)",
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
@@ -330,7 +330,7 @@ class _EditProfileScreenDay33State extends State<EditProfileScreenDay33> {
                                   ),
                                 )
                               : const Text(
-                                  "Simpan Perubahan",
+                                  "Save Changes",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w600,
