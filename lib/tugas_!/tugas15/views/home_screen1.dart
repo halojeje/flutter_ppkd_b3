@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppkd_b3/day_32/views/movie_list_day32.dart';
+import 'package:flutter_ppkd_b3/tugas_!/tugas15_API/views/movie_list.dart';
 
 const kGhibliBlue = Color(0xFF1CADE4);
 
@@ -16,7 +16,12 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               const Spacer(flex: 2),
-              const Icon(Icons.pets_outlined, size: 140, color: Colors.white),
+              const Icon(
+                Icons
+                    .movie_filter_outlined, // Atau gunakan Icons.pets_outlined / Icons.movie
+                size: 140,
+                color: Colors.white,
+              ),
               const SizedBox(height: 12),
               const Text(
                 'スタジオジブリ',
@@ -50,12 +55,12 @@ class HomeScreen extends StatelessWidget {
               ),
               const Spacer(flex: 3),
               SizedBox(
-                width: double.infinity,
+                width: 300,
+                height: 80,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     foregroundColor: kGhibliBlue,
-                    padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
